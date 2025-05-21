@@ -206,7 +206,7 @@ export default function Home() {
       <section className="relative py-20 bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/cityscape.png"
+            src="https://images.unsplash.com/photo-1471539491521-29b5b92d0e47?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhlcm8lMjBiYWNrZ3JvdW5kJTIwQkxVRXxlbnwwfHwwfHx8MA%3D%3D"
             alt="Cityscape"
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
@@ -215,17 +215,18 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Your Perfect .com.ng Domain
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Secure Your Ideal .com.ng Domain
               <br />
-              is Now Just ₦5,999
+              Now Just ₦5,999
             </h1>
             <p className="text-xl opacity-90 mb-4">
               <span className="font-semibold">.com</span> domains NOW ONLY
               ₦17,000 for registration!
             </p>
             <p className="text-xl opacity-90 mb-8">
-              Let your business be found, trusted, and clicked.
+              Boost your brand’s visibility, trust, and clicks — get started
+              today.
             </p>
             <DomainSearch />
           </div>
