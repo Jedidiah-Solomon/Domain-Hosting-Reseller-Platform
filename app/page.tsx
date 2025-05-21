@@ -1,12 +1,12 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Server, Shield, Clock, Monitor, Database, Layout } from "lucide-react"
-import DomainSearch from "@/components/domain-search"
-import TestimonialCard from "@/components/testimonial-card"
-import ServiceCard from "@/components/service-card"
-import DomainPricing from "@/components/domain-pricing"
-import RegistryLogos from "@/components/registry-logos"
-import MegaMenu from "@/components/mega-menu"
+import Link from "next/link";
+import Image from "next/image";
+import { Server, Shield, Clock, Monitor, Database, Layout } from "lucide-react";
+import DomainSearch from "@/components/domain-search";
+import TestimonialCard from "@/components/testimonial-card";
+import ServiceCard from "@/components/service-card";
+import DomainPricing from "@/components/domain-pricing";
+import RegistryLogos from "@/components/registry-logos";
+import MegaMenu from "@/components/mega-menu";
 
 export default function Home() {
   return (
@@ -16,11 +16,16 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <div className="mr-2">
-              <Image src="/logo.png" alt="Hordanso Logo" width={60} height={60} className="h-12 w-auto" />
+              <Image
+                src="https://www.hordanso.com/wp-content/uploads/2019/10/logo.png?v=2"
+                alt="Hordanso Logo"
+                width={60}
+                height={60}
+                className="h-12 w-auto"
+              />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">Hordanso</h1>
-              <p className="text-xs text-gray-500">powered by HOSTAFRIKA</p>
+              <h1 className="text-2xl font-bold text-gray-800">Hordanso LTD</h1>
             </div>
           </div>
           <nav className="hidden lg:flex space-x-8">
@@ -34,16 +39,35 @@ export default function Home() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
               <MegaMenu
                 title="Domains"
                 items={[
-                  { title: "Register Domain Names", description: "Find the perfect domain name today" },
-                  { title: "Domain Transfers", description: "Transfer domains to us and save on renewal fees" },
-                  { title: "Domain Reseller", description: "Become a domain reseller today" },
-                  { title: "WHOIS Lookup", description: "Find the whois information for any domain name" },
+                  {
+                    title: "Register Domain Names",
+                    description: "Find the perfect domain name today",
+                  },
+                  {
+                    title: "Domain Transfers",
+                    description:
+                      "Transfer domains to us and save on renewal fees",
+                  },
+                  {
+                    title: "Domain Reseller",
+                    description: "Become a domain reseller today",
+                  },
+                  {
+                    title: "WHOIS Lookup",
+                    description:
+                      "Find the whois information for any domain name",
+                  },
                 ]}
               />
             </div>
@@ -57,16 +81,36 @@ export default function Home() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
               <MegaMenu
                 title="Hosting"
                 items={[
-                  { title: "Web hosting", description: "Your journey starts here with affordable Web Hosting" },
-                  { title: "Wordpress Hosting", description: "WordPress Hosting designed to boost performance" },
-                  { title: "Reseller Hosting", description: "Start your own hosting business today" },
-                  { title: "SSL Certificates", description: "Secure your site with an SSL and build user trust" },
+                  {
+                    title: "Web hosting",
+                    description:
+                      "Your journey starts here with affordable Web Hosting",
+                  },
+                  {
+                    title: "Wordpress Hosting",
+                    description:
+                      "WordPress Hosting designed to boost performance",
+                  },
+                  {
+                    title: "Reseller Hosting",
+                    description: "Start your own hosting business today",
+                  },
+                  {
+                    title: "SSL Certificates",
+                    description:
+                      "Secure your site with an SSL and build user trust",
+                  },
                 ]}
               />
             </div>
@@ -80,7 +124,12 @@ export default function Home() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
             </div>
@@ -94,20 +143,37 @@ export default function Home() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
               <MegaMenu
                 title="Partners"
-                items={[{ title: "Affiliates", description: "Become an Affiliate and earn up to 5% for each sale" }]}
+                items={[
+                  {
+                    title: "Affiliates",
+                    description:
+                      "Become an Affiliate and earn up to 5% for each sale",
+                  },
+                ]}
               />
             </div>
-            <Link href="#" className="text-gray-700 hover:text-blue-600 font-medium">
+            <Link
+              href="#"
+              className="text-gray-700 hover:text-blue-600 font-medium"
+            >
               Blog
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
-            <Link href="#" className="hidden md:block px-4 py-2 text-gray-700 hover:text-blue-600 font-medium">
+            <Link
+              href="#"
+              className="hidden md:block px-4 py-2 text-gray-700 hover:text-blue-600 font-medium"
+            >
               Support
             </Link>
             <Link
@@ -124,7 +190,12 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
@@ -150,9 +221,12 @@ export default function Home() {
               is Now Just ₦5,999
             </h1>
             <p className="text-xl opacity-90 mb-4">
-              <span className="font-semibold">.com</span> domains NOW ONLY ₦17,000 for registration!
+              <span className="font-semibold">.com</span> domains NOW ONLY
+              ₦17,000 for registration!
             </p>
-            <p className="text-xl opacity-90 mb-8">Let your business be found, trusted, and clicked.</p>
+            <p className="text-xl opacity-90 mb-8">
+              Let your business be found, trusted, and clicked.
+            </p>
             <DomainSearch />
           </div>
           <DomainPricing />
@@ -194,7 +268,8 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Why Choose Hordanso?</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We provide reliable domain and hosting services with exceptional customer support.
+              We provide reliable domain and hosting services with exceptional
+              customer support.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -203,7 +278,10 @@ export default function Home() {
                 <Server className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold mb-3">Reliable Hosting</h3>
-              <p className="text-gray-600">99.9% uptime guarantee with high-performance servers and SSD storage.</p>
+              <p className="text-gray-600">
+                99.9% uptime guarantee with high-performance servers and SSD
+                storage.
+              </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -211,7 +289,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Enhanced Security</h3>
               <p className="text-gray-600">
-                Free SSL certificates and advanced security features to protect your website.
+                Free SSL certificates and advanced security features to protect
+                your website.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center">
@@ -219,7 +298,10 @@ export default function Home() {
                 <Clock className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold mb-3">24/7 Support</h3>
-              <p className="text-gray-600">Our dedicated support team is available around the clock to assist you.</p>
+              <p className="text-gray-600">
+                Our dedicated support team is available around the clock to
+                assist you.
+              </p>
             </div>
           </div>
         </div>
@@ -231,7 +313,8 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Don't just take our word for it. Here's what our customers have to say.
+              Don't just take our word for it. Here's what our customers have to
+              say.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -258,7 +341,9 @@ export default function Home() {
       <section className="py-12 border-t border-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <p className="text-gray-600">We are accredited with the following domain name registries</p>
+            <p className="text-gray-600">
+              We are accredited with the following domain name registries
+            </p>
           </div>
           <RegistryLogos />
         </div>
@@ -269,7 +354,8 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust Hordanso for their domain and hosting needs.
+            Join thousands of satisfied customers who trust Hordanso for their
+            domain and hosting needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -454,5 +540,5 @@ export default function Home() {
         </button>
       </div>
     </div>
-  )
+  );
 }
