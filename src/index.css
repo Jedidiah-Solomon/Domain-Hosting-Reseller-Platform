@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 213 76% 47%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+/* Custom blue color */
+.bg-blue-600 {
+  background-color: #1c69d3;
+}
+
+.bg-blue-700 {
+  background-color: #1756b3;
+}
+
+.bg-blue-800 {
+  background-color: #144693;
+}
+
+.text-blue-600 {
+  color: #1c69d3;
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: #1756b3;
+}
+
+.hover\:bg-blue-800:hover {
+  background-color: #144693;
+}
+
+.hover\:text-blue-600:hover {
+  color: #1c69d3;
+}
+
+/* Backdrop blur for Safari */
+@supports not (backdrop-filter: blur(4px)) {
+  .backdrop-blur-sm {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
