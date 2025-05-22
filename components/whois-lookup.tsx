@@ -45,34 +45,43 @@ export default function WhoisLookup() {
 
     setIsLoading(true);
     setError(null);
+    setResult(null);
 
     try {
-      // In a real implementation, this would be an API call to your backend
-      // For demo purposes, we'll simulate a response after a delay
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const cleanDomain = domain.trim().toLowerCase();
 
-      // Simulate API response
-      if (domain.includes("available")) {
-        setResult({
-          domainName: domain,
-          available: true,
-        });
-      } else {
-        setResult({
-          domainName: domain,
-          available: false,
-          registrar: "Example Registrar, Inc.",
-          registrantName: "John Doe",
-          registrantOrganization: "Example Organization",
-          registrantEmail: "contact@example.com",
-          creationDate: "2020-01-15T00:00:00Z",
-          expiryDate: "2025-01-15T00:00:00Z",
-          updatedDate: "2023-01-15T00:00:00Z",
-          nameServers: ["ns1.example.com", "ns2.example.com"],
-          status: ["clientTransferProhibited", "serverUpdateProhibited"],
-        });
+      const response = await fetch(
+        `https://api.api-ninjas.com/v1/whois?domain=${cleanDomain}`,
+        {
+          headers: {
+            "X-Api-Key": "xRswSH5ND+OWvIwCTyNFgA==q3ppO8JL9pPt1Rkv",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch WHOIS data");
       }
-    } catch (err) {
+
+      const data = await response.json();
+
+      setResult({
+        domainName: data.domain_name,
+        available: data.available || false,
+        registrar: data.registrar || "N/A",
+        registrantName: "Hidden for privacy",
+        registrantOrganization: "Hidden for privacy",
+        registrantEmail: "Hidden for privacy",
+        creationDate: data.creation_date
+          ? new Date(data.creation_date * 1000).toISOString()
+          : undefined,
+        expiryDate: new Date(data.expiration_date * 1000).toISOString(),
+        updatedDate: new Date(data.updated_date * 1000).toISOString(),
+        nameServers: data.name_servers,
+        status: data.status || [],
+      });
+    } catch (err: any) {
+      console.error(err);
       setError("Failed to fetch WHOIS information. Please try again.");
     } finally {
       setIsLoading(false);

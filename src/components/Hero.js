@@ -6,7 +6,7 @@ function Hero() {
     <section className="relative py-20 bg-gray-900 text-white overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://docs.mikepoweredbydhi.com/domain_services/media/architecture-overview.png"
+          src="../public/architecture-overview.png"
           alt="Cityscape"
           className="w-full h-full object-cover object-center opacity-40"
         />
